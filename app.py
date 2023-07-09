@@ -64,9 +64,30 @@ def contact():
     
     return render_template('Form.html', header='Post Your Comments')
 
-# @app.route("/registration")
-# def registration():
-#     return
+@app.route("/registration", methods = ['GET','POST'])
+def registration():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        data = {'email': email,
+                'password': password}
+     
+         # Adding data into JSON file
+        with open('data/registration.json', 'a+') as f:
+            f.seek(0)
+            try:
+                old_data = json.load(f)
+            except ValueError:
+                old_data = []
+
+            old_data.append(data)
+
+        with open('data/registration.json','w') as f:
+            json.dump(old_data,f)
+
+        return redirect('/home')
+    return render_template('registration.html', header='Registration')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
