@@ -46,7 +46,7 @@ def contact():
                 'comments':comments}
         
         # Adding data into JSON file
-        with open('/data/comment_table.json', 'a+') as f:
+        with open('data/comment_table.json', 'a+') as f:
             f.seek(0)
             try:
                 old_data = json.load(f)
