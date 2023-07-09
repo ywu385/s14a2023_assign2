@@ -32,7 +32,7 @@ def list():
 
 @app.route('/success')
 def success():
-    return render_template(success.html,header='Success!')
+    return render_template('success.html',header='Success!')
 
 @app.route("/contact", methods = ['GET','POST'])
 def contact():
