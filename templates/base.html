@@ -170,12 +170,13 @@
         {% block content %}
             This is the main content of every page
         {% endblock %}
-    
+        
         <!-- This Jinja control, a loop, is included on every page of the webapp. -->
+        <!--
         {% for item in navigation %}
             <li><a href="{{ item.url }}">{{ item.label }}</a></li>
         {% endfor %}
-    
+        -->
         <!-- Sample `include` of a Jinja "sub-template" -->
         {% include '_footer.html' %}
     </div>
