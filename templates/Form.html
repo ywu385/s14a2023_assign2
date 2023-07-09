@@ -3,8 +3,25 @@
 {% block title %}URLLibrary{% endblock %}
 
 {% block content %}
+
 <main class="form-signin w-100 m-auto">
-  <form>
+  <style>
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: black;
+      opacity: 1; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: black;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: black;
+    }
+    </style>
+    
+
+  <form method = "POST" action ="/submit">
     <img class="mb-4" src="/favicon/icons8-morty-smith-96.png" alt="" width="96" height="96">
     <h1 class="h3 mb-3 fw-normal">Contact Info</h1>
 
@@ -16,7 +33,7 @@
       <textarea class="form-control" id="floatingComments" placeholder="Comments"></textarea>
       <label for="floatingComments">Comments</label>
     </div>   
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <button class="btn btn-primary w-100 py-2" type="submit">submit</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
   </form>
 </main>
