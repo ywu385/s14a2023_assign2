@@ -44,8 +44,8 @@ def contact():
         data = {'name':name,
                 'email':email,
                 'comments':comments}
-        
         return redirect('/success')
+    
     return render_template('Form.html', header='Post Your Comments')
 
 # @app.route("/registration")
