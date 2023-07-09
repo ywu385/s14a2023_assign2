@@ -44,6 +44,19 @@ def contact():
         data = {'name':name,
                 'email':email,
                 'comments':comments}
+        
+        # Adding data into JSON file
+        with open('/data/comment_table.json', 'a+') as f:
+            f.seek(0)
+            try:
+                old_data = json.load(f)
+            except ValueError:
+                old_data = []
+
+            old_data.append(data)
+            f.seek(0)
+            json.dump(old_data,f)
+
         return redirect('/success')
     
     return render_template('Form.html', header='Post Your Comments')
