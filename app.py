@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 import json
 
 
@@ -28,19 +28,24 @@ def about():
 
 @app.route("/list")
 def list():
-    return render_template('table.html',header = 'Comment Table')
+    return render_template('table.html',header = 'Who has been here?')
+
+@app.route('/success')
+def success():
+    return render_template(success.html,header='Success!')
 
 @app.route("/contact", methods = ['GET','POST'])
 def contact():
     if request.method == 'POST':
-        email = request.form.get('name')
+        name = request.form.get('name')
         email = request.form.get('email')
         comments = request.form.get('comments')
 
-
-
-
-
+        data = {'name':name,
+                'email':email,
+                'comments':comments}
+        
+        return redirect('/success')
     return render_template('Form.html', header='Post Your Comments')
 
 # @app.route("/registration")
