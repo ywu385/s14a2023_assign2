@@ -2,6 +2,10 @@
 
 {% block title %}URLLibrary{% endblock %}
 
+{% block header}
+<h3 class="float-md-start mb-0">{{header}}</h3>
+{% endblock %}
+
 {% block content %}
 
 <main class="form-signin w-100 m-auto", style="color: grey">
@@ -11,15 +15,15 @@
     <h1 class="h3 mb-3 fw-normal">Contact Info</h1>
 
     <div class="form-floating">
-      <input type="test" class="form-control" id="floatingName" placeholder="Name">
+      <input type="test" class="form-control" id="floatingName" name ="name" placeholder="Name">
       <label for="floatingName">Name</label>
     </div>    
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+      <input type="email" class="form-control" id="floatingEmail" name ="email" placeholder="name@example.com">
       <label for="floatingEmail">Email address</label>
     </div>
     <div class="form-floating">
-      <textarea class="form-control" id="floatingComments" placeholder="Comments"></textarea>
+      <textarea class="form-control" id="floatingComments" name = "comments" placeholder="Comments"></textarea>
       <label for="floatingComments">Comments</label>
     </div>   
     <button class="btn btn-primary w-100 py-2" type="submit">submit</button>
