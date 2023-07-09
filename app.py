@@ -17,16 +17,16 @@ def index():
     # return render_template('test.html')
 
 
-@app.route("/home")
-def home():
-    return render_template('index.html',navigation = links)
+# @app.route("/home")
+# def home():
+#     return render_template('index.html',navigation = links)
 
-@app.route("/about")
-def about():
-    return render_template('about.html',navigation = links)
+# @app.route("/about")
+# def about():
+#     return render_template('about.html',navigation = links)
 
-@app.route("/list")
-def list():
+# @app.route("/list")
+# def list():
     return render_template('table.html')
 
 # @app.route("/contact", methods = ['GET','POST'])
