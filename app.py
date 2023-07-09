@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import json
 
 
 app = Flask(__name__)
@@ -35,6 +36,9 @@ def contact():
         email = request.form.get('name')
         email = request.form.get('email')
         comments = request.form.get('comments')
+
+
+
 
 
     return render_template('Form.html', header='Post Your Comments')
