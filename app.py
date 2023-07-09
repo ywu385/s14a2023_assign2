@@ -55,9 +55,9 @@ def contact():
             except ValueError:
                 old_data = []
 
-            old_data.append(data)
+            # old_data.append(data)
             f.seek(0)
-            json.dump(old_data,f)
+            json.dump(data,f)
 
         return redirect('/success')
     
