@@ -11,8 +11,8 @@ links = [
 
 @app.route("/")
 def index():
-    return 'Hello, World!'
-    # return render_template('index.html',navigation=links)
+    # return 'Hello, World!'
+    return render_template('index.html',navigation=links)
 
 @app.route("/home")
 def home():
