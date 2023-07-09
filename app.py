@@ -29,14 +29,14 @@ def about():
 def list():
     return render_template('table.html')
 
-@app.route("/contact", methods = ['GET','POST'])
-def contact():
-    if request.method == 'POST':
-        email = request.form.get('email')
-        comments = request.form.get('comments')
+# @app.route("/contact", methods = ['GET','POST'])
+# def contact():
+#     if request.method == 'POST':
+#         email = request.form.get('email')
+#         comments = request.form.get('comments')
 
 
-    return render_template('Form.html')
+#     return render_template('Form.html')
 
 # @app.route("/registration")
 # def registration():
