@@ -17,22 +17,18 @@
     </tr>
   </thead>
   <tbody>
+    {% for row in data %}
     <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{{ row.name }}</td>
     </tr>
     <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>{{ row.email }}</td>
     </tr>
     <tr>
-      <td>Larry the Bird</td>
-      <td></td>
-      <td>@twitter</td>
+      <td>{{ row.comments }}</td>
     </tr>
   </tbody>
+  {% endfor %}
 </table>
 
 

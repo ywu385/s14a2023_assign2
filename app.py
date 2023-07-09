@@ -28,7 +28,9 @@ def about():
 
 @app.route("/list")
 def list():
-    return render_template('table.html',header = 'Who has been here?')
+    with open('data/comment_table.json','r') as f:
+        data = json.load(f)
+    return render_template('table.html',data = data, header = 'Who has been here?')
 
 @app.route('/success')
 def success():
