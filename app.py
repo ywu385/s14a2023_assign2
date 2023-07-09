@@ -12,35 +12,35 @@ app.debug = True
 
 @app.route("/")
 def index():
-    return 'Hello, World!'
-    # return render_template('index.html',navigation=links)
+    # return 'Hello, World!'
+    return render_template('index.html',navigation=links)
     # return render_template('test.html')
 
 
-# @app.route("/home")
-# def home():
-#     return render_template('index.html',navigation = links)
+@app.route("/home")
+def home():
+    return render_template('index.html',navigation = links)
 
-# @app.route("/about")
-# def about():
-#     return render_template('about.html',navigation = links)
+@app.route("/about")
+def about():
+    return render_template('about.html',navigation = links)
 
-# @app.route("/list")
-# def list():
+@app.route("/list")
+def list():
     return render_template('table.html')
 
-# @app.route("/contact", methods = ['GET','POST'])
-# def contact():
-#     if request.method == 'POST':
-#         email = request.form.get('email')
-#         comments = request.form.get('comments')
+@app.route("/contact", methods = ['GET','POST'])
+def contact():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        comments = request.form.get('comments')
 
 
-#     return render_template('Form.html')
+    return render_template('Form.html')
 
-# @app.route("/registration")
-# def registration():
-#     return
+@app.route("/registration")
+def registration():
+    return
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
