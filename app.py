@@ -55,9 +55,10 @@ def contact():
             except ValueError:
                 old_data = []
 
-            # old_data.append(data)
-            f.seek(0)
-            json.dump(data,f)
+            old_data.append(data)
+
+        with open('data/comment_table.json','w') as f:
+            json.dump(old_data,f)
 
         return redirect('/success')
     
