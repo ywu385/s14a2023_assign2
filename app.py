@@ -19,7 +19,7 @@ def index():
 
 @app.route("/home")
 def home():
-    return render_template('home.html',navigation = links)
+    return render_template('index.html',navigation = links)
 
 @app.route("/about")
 def about():
@@ -28,6 +28,10 @@ def about():
 @app.route("/list")
 def list():
     return render_template('table.html')
+
+@app.route("/contact")
+def contact():
+    return render_template('Form.html')
 
 @app.route("/registration")
 def registration():
