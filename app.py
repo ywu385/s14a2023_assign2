@@ -12,8 +12,8 @@ app.debug = True
 
 @app.route("/")
 def index():
-    # return 'Hello, World!'
-    return render_template('index.html',navigation=links)
+    return 'Hello, World!'
+    # return render_template('index.html',navigation=links)
     # return render_template('test.html')
 
 
@@ -34,7 +34,7 @@ def contact():
     if request.method == 'POST':
         email = request.form.get('email')
         comments = request.form.get('comments')
-    
+
 
     return render_template('Form.html')
 
